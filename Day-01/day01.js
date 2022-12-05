@@ -4,13 +4,13 @@ const fs = require('fs');
 fs.readFile('day01.txt', 'utf-8', (err, data) => {
     if (err) throw err;
 
-    //sanitize the data
     const getSumByElf = (group) =>
     group
         .split("\n") //divide each group into arrays of string
         .map(Number) //make the strings into integers
         .reduce((sum,num) => sum + num, 0); //add each numbers of the array, sum starts at 0
-
+    
+    //sanitize the data
     const elves = 
         data
             .trim() //trim white space before and after the input
