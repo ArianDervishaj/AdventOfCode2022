@@ -20,10 +20,23 @@ fs.readFile('day01.txt', 'utf-8', (err, data) => {
     //find the sum of each group
     const elvesSum = elves.map(getSumByElf);
 
-    //find the largest
+
+    //Puzzle 1 find the largest
     const maxSum = Math.max(...elvesSum);
 
-    console.log(maxSum);
+    //Puzzle 3 find the 3 largest
+    elvesSum.sort(function(a, b){return b - a}); //sort descending order
+
+    let largestSumTotal = 0;
+
+    for(let i = 0; i < 3; i++){
+        largestSumTotal += elvesSum[i];
+    }
+
+
+
+    console.log("Max sum : " + maxSum);
+    console.log("Largest sum total : " + largestSumTotal);
 } )
 
 
