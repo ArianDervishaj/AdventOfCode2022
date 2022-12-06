@@ -10,10 +10,5 @@ fs.readFile('./day02.txt', 'utf-8', (err, data) => {
         .trim()
         .split("\n");
 
-    const scorePuzzle1 = puzzle1(strat);
-    console.log("Puzzle 1 : " + scorePuzzle1);
-
-    const scorePuzzle2 = puzzle2(strat);
-    console.log("Puzzle 2 : " + scorePuzzle2);
     
 } )
