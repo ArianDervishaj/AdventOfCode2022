@@ -36,14 +36,26 @@ CrZsJsPPZsGzwwsLwLmpwMDw
         .trim()
         .split("\n");
         
-        
+    let bothArray = [];
     rucksacks.map(rucksack => {
         const splitedRucksack = splitArray(rucksack);
         const leftRucksack = splitedRucksack[0];
         const rightRucksack = splitedRucksack[1];
 
 
-        console.log(leftRucksack + " & " + rightRucksack);
-        console.log(rucksack.length + " " + leftRucksack.length + " " + rightRucksack.length)
+
+        for(let left = 0; left < leftRucksack.length; left++){
+            for(let right = 0; right < rightRucksack.length; right++){
+
+                if(leftRucksack[left] === rightRucksack[right]){
+
+                    if(!bothArray.includes(leftRucksack[left])) //if the letter isn't already in the array pushes it in the array
+                        bothArray.push(leftRucksack[left]);
+                }
+
+            }
+        }
+
     })
+    console.log(bothArray);
 } )
