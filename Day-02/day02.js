@@ -156,7 +156,7 @@ function puzzle2(strat){
     
 }
 
-//take the data from the day01.txt file
+//take the data from the day02.txt file
 fs.readFile('./day02.txt', 'utf-8', (err, data) => {
     if (err) throw err;
 
